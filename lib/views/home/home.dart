@@ -1,5 +1,4 @@
 // ignore_for_file: avoid_print, no_leading_underscores_for_local_identifiers, library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
@@ -28,7 +27,6 @@ class _HomeState extends State<Home> {
     }
   }
 
-  // Function to delete the image
   void _deleteImage() {
     setState(() {
       _imageFile = null;
@@ -67,18 +65,19 @@ class _HomeState extends State<Home> {
               : const Padding(
                   padding: EdgeInsets.only(top: 310),
                   child: Center(
-                    child: Text("No image selected yet."),
+                    child: Text("No images"),
                   ),
                 ),
         ],
       ),
-      // Conditionally show the delete button when an image is selected
       floatingActionButton: _imageFile != null
           ? FloatingActionButton(
-            // focusColor: Colors.blue,
               onPressed: _deleteImage,
               backgroundColor: Colors.blue,
-              child: const Icon(Icons.delete,color: Colors.black,),
+              child: const Icon(
+                Icons.delete,
+                color: Colors.black,
+              ),
             )
           : null,
     );
