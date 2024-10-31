@@ -1,5 +1,4 @@
 // ignore_for_file: unused_import
-
 import 'package:camera/camera.dart';
 import 'package:camera_ai/views/home/home.dart';
 import 'package:camera_ai/views/mainPage.dart';
